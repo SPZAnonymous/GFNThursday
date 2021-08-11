@@ -22,7 +22,7 @@ async function init_test() {
     
     app.get('/about'. (req, res) => {
         res.json({
-            title: juegos_text3
+            title: 'Bafo'
         )}
     )}
             
