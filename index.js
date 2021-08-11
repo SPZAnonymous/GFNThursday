@@ -19,7 +19,13 @@ async function init_test() {
         juegos_text3 = juegos_text2.replace("Search below to find your library of games, or look for new ones including many of the latest releases and top free-to-play games – all available instantly.", "").replace("*Some games listed may not appear until later in the week, including new game launches. You must already own or purchase titles to play them on GeForce NOW.", "")
         console.log(juegos_text3)
     })
-
+    
+    app.get('/about'. (req, res) => {
+        res.json({
+            title: juegos_text3
+        )}
+    )}
+            
     return juegos_text3
 
 
