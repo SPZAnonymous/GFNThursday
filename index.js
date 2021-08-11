@@ -20,16 +20,18 @@ async function init_test() {
     
     const PORT = process.env.PORT || 8877;
     
-    app.get('/about'. (req, res) => {
+    app.get('/about', (req, res) => {
         res.json({
             title: 'Bafo'
         )}
     )}
-    app.listen(PORT);
+    app.listen(PORT, () => {
+      console.log(`Foi executado na porta:` + PORT)
+    });
     
     return juegos_text3
 
 
-}
+})
 
 init_test()
