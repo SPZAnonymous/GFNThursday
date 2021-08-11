@@ -1,8 +1,6 @@
 const express = require('express');
 const app = express();
 
-const PORT = process.env.PORT || 8877;
-
 const cheerio = require("cheerio")
 const request = require("request-promise")
 
@@ -20,12 +18,15 @@ async function init_test() {
         console.log(juegos_text3)
     })
     
+    const PORT = process.env.PORT || 8877;
+    
     app.get('/about'. (req, res) => {
         res.json({
             title: 'Bafo'
         )}
     )}
-            
+    app.listen(PORT);
+    
     return juegos_text3
 
 
