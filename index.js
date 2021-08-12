@@ -23,15 +23,15 @@ async function init_test() {
     app.get('/about', (req, res) => {
         res.json({
             title: 'Bafo'
-        )}
-    )}
+        })
+    })
     app.listen(PORT, () => {
-      console.log(`Foi executado na porta:` + PORT)
-    });
+      console.log('Executado na porta:' + PORT)
+    })
     
     return juegos_text3
 
-
-})
+    
+}
 
 init_test()
