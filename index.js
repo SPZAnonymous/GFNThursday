@@ -29,9 +29,7 @@ const main = async () => {
 
         })
         app.listen(PORT, () => {})
-        //console.log(juegos_text3)
 
-    //gfn.push(dateira)
     })
 
     console.log(gfn)
