@@ -7,7 +7,7 @@ const fetchData = async(url) => {
     const result = await axios.get(url)
     return result.data
 }
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 const main = async () => {
     const content = await fetchData("https://www.nvidia.com/en-us/geforce-now/games/")
     const $ = cheerio.load(content)
