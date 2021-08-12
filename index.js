@@ -1,3 +1,6 @@
+const express = require('express');
+const app = express();
+
 const cheerio = require("cheerio")
 const request = require("request-promise")
 
@@ -14,10 +17,21 @@ async function init_test() {
         juegos_text3 = juegos_text2.replace("Search below to find your library of games, or look for new ones including many of the latest releases and top free-to-play games – all available instantly.", "").replace("*Some games listed may not appear until later in the week, including new game launches. You must already own or purchase titles to play them on GeForce NOW.", "")
         console.log(juegos_text3)
     })
-
+    
+    const PORT = process.env.PORT;
+    
+    app.get('/', (req, res) => {
+        res.json({
+            title: 'Sibés'
+        })
+    })
+    app.listen(PORT, () => {
+      console.log('Executado na porta:' + PORT)
+    })
+    
     return juegos_text3
 
-
+    
 }
 
 init_test()
